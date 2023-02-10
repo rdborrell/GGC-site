@@ -1,3 +1,4 @@
+![](./GGC-site/public/assets/Logo.jpg)
 # GGC Site
 This repository contains the code for a website built using Vite, React, and Tailwind CSS.
 
