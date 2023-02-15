@@ -18,15 +18,27 @@
   scroll-behavior: smooth;
 }
 
+.rounded-corners{
+  border-radius: 30px;
+}
+
+.navbar{
+  border-bottom: 0px solid transparent;
+}
+
+.bg-transparent{
+  background-color: #00040F;
+}
+
 .text-gradient {
   background: radial-gradient(
     64.18% 64.18% at 71.16% 35.69%,
-    #def9fa 0.89%,
-    #bef3f5 17.23%,
-    #9dedf0 42.04%,
-    #7de7eb 55.12%,
-    #5ce1e6 71.54%,
-    #33bbcf 100%
+    #fdde9b 0.89%,
+    #fcd682 17.23%,
+    #fccd69 42.04%,
+    #fbbd37 55.12%,
+    #faac05 71.54%,
+    #CA8A04 100%
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -44,6 +56,17 @@
     #5ce1e6 51.94%,
     #33bbcf 90.29%
   );
+}
+
+.bg-gold-gradient {
+  background: rgb(0,0,0);
+  background: linear-gradient(
+    0deg,
+     rgba(0,0,0,1) 60%,
+      rgba(105,72,2,1) 65%,
+       rgba(136,93,3,1) 72%,
+        rgba(172,117,4,1) 77%,
+         rgba(202,138,4,1) 100%);
 }
 
 .bg-black-gradient {
@@ -70,10 +93,6 @@
     rgba(255, 255, 255, 0) -341.94%,
     #14101d 95.11%
   );
-}
-
-.bg-discount-gradient {
-  background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
 }
 
 .box-shadow {
@@ -130,7 +149,7 @@
 }
 
 .pink__gradient {
-  background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
+  background: linear-gradient(90deg, #fef7e6 0%, #CA8A04 100%);
   filter: blur(900px);
 }
 
