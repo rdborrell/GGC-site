@@ -24,10 +24,17 @@
 
 .navbar{
   border-bottom: 0px solid transparent;
+  z-index: 0;
 }
 
 .bg-transparent{
   background-color: #00040F;
+}
+
+.centered-div {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 .text-gradient {
@@ -156,4 +163,8 @@
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
+}
+
+.facebook_blue{
+  color: #4267B2;
 }
