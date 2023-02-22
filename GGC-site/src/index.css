@@ -76,6 +76,17 @@
          rgba(202,138,4,1) 100%);
 }
 
+.h1Center{
+  width:500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.h1Left{
+  width:500px;
+  text-align: left;
+}
+
 .bg-black-gradient {
   background: linear-gradient(
     144.39deg,
@@ -167,4 +178,8 @@
 
 .facebook_blue{
   color: #4267B2;
+}
+
+.maps_red{
+  color: #de5246;
 }

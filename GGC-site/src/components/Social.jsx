@@ -1,21 +1,30 @@
 import React from 'react'
 import styles from '../style'
-import {churchPicture} from '../assets'
+import Facebook from './Facebook'
+import Maps from './Maps'
+
 
 const Social = () => {
   return(
-    <section>
-        <div className='centered-div'>
-            <h1 className='flex-1 font-poppins font-semibold ss:text-[32px] text-[12px] text-white ss:leading-[100.8px] leading-[75px]'>
-            Connect with us on
-            <span className='facebook_blue'> Facebook</span>
+    <section id='home' className={`flex md:flex-row flex-col ${styles.paddingY}`}>
+      
+      <div>
+        <div className='sm:float-left float-center'>
+            <h1 className='flex-1 font-poppins font-semibold ss:text-[32px] text-[25px] text-white ss:leading-[100.8px] leading-[75px]'>
+            Connect on
+            <span className='facebook_blue'> Facebook!</span>
+            <Facebook/>
             </h1>
         </div>
-        <div>
-            <p className='text-white'>
-                Planning to embed facebook page here
-            </p>
+        
+        <div className='sm:float-right float-center'>
+            <h1 className='flex-1 font-poppins font-semibold ss:text-[32px] text-[25px] text-white ss:leading-[100.8px] leading-[75px]'>
+            Find us on
+            <span className='maps_red'> Maps!</span>
+            <Maps/>
+            </h1>
         </div>
+      </div>
     </section>
   )
 }
