@@ -22,6 +22,14 @@
   border-radius: 30px;
 }
 
+.moveDown{
+  margin-top: 56px;
+}
+
+.hiddenMobile{
+  display: none
+}
+
 .navbar{
   border-bottom: 0px solid transparent;
   z-index: 0;
