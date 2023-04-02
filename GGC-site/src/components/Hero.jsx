@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from '../style'
-import {churchPicture} from '../assets'
+import {churchPicture, ggcTag} from '../assets'
 
 const Hero = () => {
   return(
@@ -16,7 +16,7 @@ const Hero = () => {
           Sit amet nulla facilisi morbi. Mauris cursus mattis molestie a iaculis at erat.</p>
       </div>
       <div className={`flex-1 flex ${styles.flexEnd} md:my-0 my-10 relative`}>
-        <img src={churchPicture} alt='churchPicture' className='w-[60%] h-[auto] relative z-[5] rounded-corners hiddenMobile sm:block'/>
+        {/* <img src={ggcTag} alt='ggcTag' className='w-[60%] h-[auto] relative z-[5] mr-12 mt-1 rounded-corners hiddenMobile sm:block'/> */}
       </div>
       <div className='absolute z-[0] w-[60%] h-[45%] top-15 pink__gradient'/>
     </section>
