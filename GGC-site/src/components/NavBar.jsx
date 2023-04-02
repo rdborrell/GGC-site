@@ -11,7 +11,7 @@ const NavBar = () => {
            alt='GGChurch'
            className='w-[120px] h-[40px]'/>
 
-      <ul className='list-none sm:flex hidden justify-end items-center flex-1'>
+      <ul className='list-none sm:flex hidden justify-end items-center flex-1 z-[100]'>
         {navLinks.map((nav, index) => (
           <li
             key={nav.id}

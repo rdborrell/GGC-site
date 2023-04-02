@@ -1,5 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  // ...
+  plugins: [
+    // ...
+    require('@tailwindcss/forms'),
+  ],
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   mode: "jit",
   theme: {

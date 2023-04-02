@@ -22,12 +22,37 @@
   border-radius: 30px;
 }
 
+.moveDown{
+  margin-top: 56px;
+}
+
+.hiddenMobile{
+  display: none
+}
+
 .navbar{
   border-bottom: 0px solid transparent;
+  z-index: 0;
 }
 
 .bg-transparent{
   background-color: #00040F;
+}
+
+.centered-div {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.styledButton{
+  background-color: black;
+  color: white;
+  font-size: 20px;
+  padding: 10px 60px;
+  border-radius: 5px;
+  margin: 10px 0px;
+  cursor: pointer;
 }
 
 .text-gradient {
@@ -67,6 +92,17 @@
        rgba(136,93,3,1) 72%,
         rgba(172,117,4,1) 77%,
          rgba(202,138,4,1) 100%);
+}
+
+.h1Center{
+  width:500px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.h1Left{
+  width:500px;
+  text-align: left;
 }
 
 .bg-black-gradient {
@@ -156,4 +192,12 @@
 .white__gradient {
   background: rgba(255, 255, 255, 0.6);
   filter: blur(750px);
+}
+
+.facebook_blue{
+  color: #4267B2;
+}
+
+.maps_red{
+  color: #de5246;
 }
