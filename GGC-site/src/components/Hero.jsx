@@ -18,7 +18,7 @@ const Hero = () => {
       <div className={`flex-1 flex ${styles.flexEnd} md:my-0 my-10 relative`}>
         {/* <img src={ggcTag} alt='ggcTag' className='w-[60%] h-[auto] relative z-[5] mr-12 mt-1 rounded-corners hiddenMobile sm:block'/> */}
       </div>
-      <div className='absolute z-[0] w-[60%] h-[45%] top-15 pink__gradient'/>
+      <div className='absolute z-[0] w-[60%] h-[45%] top-0 pink__gradient'/>
     </section>
   )
 }

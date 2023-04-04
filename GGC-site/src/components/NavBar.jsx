@@ -9,7 +9,7 @@ const NavBar = () => {
 
       <img src={logo} 
            alt='GGChurch'
-           className='w-[120px] h-[40px]'/>
+           className='w-[120px] h-[40px] z-[100]'/>
 
       <ul className='list-none sm:flex hidden justify-end items-center flex-1 z-[100]'>
         {navLinks.map((nav, index) => (
@@ -27,7 +27,7 @@ const NavBar = () => {
           <img 
             src={toggle ? close : menu}
             alt="menu"
-            className='w-[28px] h-[28px] object-contain'
+            className='w-[28px] h-[28px] z-[100] object-contain'
             onClick={() => setToggle((prev) => !prev)}
           />
         <div className={`${toggle ? 'flex' : 'hidden'} p-6 bg-white-opacity-100 absolute top-20 right-0 mx-4 my-2 min-w-[140px] rounded-x1 sidebar`}>
