@@ -4,6 +4,7 @@ import close from "./close.svg";
 import churchPicture from "./churchPicture.jpg"
 import sundayService from "./sundayService.jpg"
 import ggcTag from "./ggcTag.png"
+import playStoreBadge from "./playStoreBadge.png"
 
 export {
   logo,
@@ -11,5 +12,6 @@ export {
   close,
   churchPicture,
   sundayService,
-  ggcTag
+  ggcTag,
+  playStoreBadge
 };

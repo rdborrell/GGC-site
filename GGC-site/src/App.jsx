@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './style'
 
-import { NavBar, Hero, Footer, About, Social} from "./components"
+import { NavBar, Hero, Footer, About, Social, ChurchCenter} from "./components"
 import ContactForm from './components/ContactForm'
 
 const App = () => {
@@ -35,6 +35,12 @@ const App = () => {
 
         <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
           <div className={`${styles.boxWidth}`}>
+          <ChurchCenter />
+          </div>
+        </div>
+
+        <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
+          <div className={`${styles.boxWidth}`}>
           <ContactForm />
           </div>
         </div>
@@ -45,7 +51,7 @@ const App = () => {
           </div>
         </div>
 
-        <div><break></break></div>
+        <div></div>
 
       </div>
     </div>

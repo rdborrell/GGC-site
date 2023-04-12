@@ -5,6 +5,7 @@ import About from "./About";
 import Social from "./Social";
 import Facebook from "./Facebook";
 import Maps from "./Maps";
+import ChurchCenter from "./ChurchCenter";
 
 export {
   NavBar,
@@ -13,5 +14,6 @@ export {
   About,
   Social,
   Facebook,
-  Maps
+  Maps,
+  ChurchCenter
 };
