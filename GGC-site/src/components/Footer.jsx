@@ -1,9 +1,9 @@
 import React from 'react'
+import ChurchCenter from './ChurchCenter'
 
 const Footer = () => {
   return (
-        <div class=" bg-transparent">
-        <div className='absolute z-[0] w-[60%] h-[30%] top-13 pink__gradient'/>
+    <div class=" bg-transparent">
         <div class="max-w-2xl mx-auto text-white py-10">
             <div class="text-center font-poppins">
                 <h3 class="text-3xl mb-3"> Know Christ. Love Christ. Share Christ. </h3>
