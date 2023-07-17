@@ -12,11 +12,10 @@ const Hero = () => {
             <span className='text-gradient'>Church</span>{" "}
           </h1>
         </div>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Sit amet nulla facilisi morbi. Mauris cursus mattis molestie a iaculis at erat.</p>
+        <p className={`${styles.paragraph} max-w-[470px] mt-5`}></p>
       </div>
       <div className={`flex-1 flex ${styles.flexEnd} md:my-0 my-10 relative`}>
-        {/* <img src={ggcTag} alt='ggcTag' className='w-[60%] h-[auto] relative z-[5] mr-12 mt-1 rounded-corners hiddenMobile sm:block'/> */}
+        <img src={ggcTag} alt='ggcTag' className='w-[60%] h-[auto] relative z-[5] mr-12 mt-1 rounded-corners hiddenMobile sm:block'/>
       </div>
       <div className='absolute z-[0] w-[60%] h-[45%] top-0 pink__gradient'/>
     </section>

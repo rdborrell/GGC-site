@@ -11,8 +11,8 @@ const About = () => {
             About Us
           </h1>
         </div>
-        <p className={`${styles.paragraph} max-w-[900px] mt-5`}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Sit amet nulla facilisi morbi. Mauris cursus mattis molestie a iaculis at erat.</p>
+        <p className={`${styles.paragraph} max-w-[900px] mt-5`}>Founded in Summersville, West Virginia, Grace Gospel Church is a fellowship of like minded believers in Christ. We meet every Sunday
+        at the location mentioned below, and would love to see you there!</p>
       </div>
     </section>
   )

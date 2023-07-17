@@ -7,7 +7,7 @@ const Footer = () => {
         <div class="max-w-2xl mx-auto text-white py-10">
             <div class="text-center font-poppins">
                 <h3 class="text-3xl mb-3"> Know Christ. Love Christ. Share Christ. </h3>
-                <p> ggchurch@ggc.org </p>
+                <p> info@gracegospelchurch.us </p>
                 <p> 151 Sids Way Summersville, WV 26651 </p>
                 <p> 304-123-4567 </p>
             </div>
