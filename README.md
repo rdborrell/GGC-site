@@ -36,9 +36,3 @@ $ npm run build
 ```
 
 This will create a dist folder with optimized production-ready files. You can then serve the contents of this folder using a web server of your choice.
-
-# Contributions:
-Contributions are always welcome. If you want to contribute to the project, please create a pull request.
-
-# License:
-This project is licensed under the MIT License.
