@@ -15,6 +15,12 @@ export const navLinks = [
     id: "findUs",
     title: "Find Us",
   },
+  {
+    id: "instagram",
+    title: "Instagram",
+    icon: true, 
+    url: "https://www.instagram.com/ggcsummersville/",
+  },
 ];
 
 export const footerLinks = [

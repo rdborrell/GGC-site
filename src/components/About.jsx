@@ -11,8 +11,7 @@ const About = () => {
             About Us
           </h1>
         </div>
-        <p className={`${styles.paragraph} max-w-[900px] mt-5`}>Founded in Summersville, West Virginia, Grace Gospel Church is a fellowship of like minded believers in Christ. We meet every Sunday
-        at the location mentioned below, and would love to see you there!</p>
+        <p className={`${styles.paragraph} max-w-[900px] mt-5`}>Grace Gospel Church exists to know Christ, love Christ, and share Christ with all those in the greater Nicholas County Area. We are a gospel centered, Bible believing, historically orthodox, Christian Church located in Summersville WV. Please join us this week at any of our gatherings to proclaim the name of Jesus!</p>
       </div>
     </section>
   )

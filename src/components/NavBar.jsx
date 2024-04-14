@@ -1,6 +1,9 @@
 import { useState } from 'react'
 import { close, logo, menu} from "../assets"
 import { navLinks } from '../constants'
+import { FaInstagram } from 'react-icons/fa';
+
+
 const NavBar = () => {
     const [toggle, setToggle] = useState(false);
     
@@ -14,12 +17,18 @@ const NavBar = () => {
       <ul className='list-none sm:flex hidden justify-end items-center flex-1 z-[100]'>
         {navLinks.map((nav, index) => (
           <li
-            key={nav.id}
-            className={`font-poppins font-normal cursor-pointer text-[20px] text-yellow-600
-            ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}`}
-            >
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
+          key={nav.id}
+          className={`font-poppins font-normal cursor-pointer text-[20px] text-yellow-600
+          ${index === navLinks.length - 1 ? 'mr-0' : 'mr-10'}`}
+        >
+          {nav.icon ? (
+            <a href={nav.url} target="_blank" rel="noopener noreferrer">
+              <FaInstagram />
+            </a>
+          ) : (
+            <a href={`#${nav.id}`}>{nav.title}</a>
+          )}
+        </li>
         ))}
       </ul>
 

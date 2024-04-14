@@ -31,8 +31,18 @@
 }
 
 .navbar{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   border-bottom: 0px solid transparent;
-  z-index: 0;
+  background-color: #00040F;
+  padding: 10px 0;
+}
+
+.moveDown{
+  margin-top: 64px;
 }
 
 .bg-transparent{

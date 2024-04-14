@@ -1,5 +1,6 @@
 import React from 'react'
 import ChurchCenter from './ChurchCenter'
+import { FaInstagram } from 'react-icons/fa';
 
 const Footer = () => {
   return (
@@ -11,6 +12,7 @@ const Footer = () => {
                 <p> 151 Sids Way Summersville, WV 26651 </p>
                 <p> 304-123-4567 </p>
             </div>
+            
             <div class="mt-10 flex flex-col md:flex-row md:justify-between items-center text-sm text-gray-400">
                 <p class="order-2 md:order-1 mt-8 md:mt-0 font-poppins"> Grace Gospel Church </p>
                 <div class="order-1 md:order-2 font-poppins">
