@@ -14,6 +14,11 @@ const styles = {
   
     marginX: "sm:mx-16 mx-6",
     marginY: "sm:my-16 my-6",
+
+    videoContainer: 'flex justify-center items-center mt-8',
+    pageContainer: 'min-h-screen flex flex-col',
+    navbar: 'w-full flex py-6 justify-between items-center fixed top-0 left-0 bg-blue-1000 z-50',
+    rightMargin: 'mr-4'
   };
   
   export const layout = {

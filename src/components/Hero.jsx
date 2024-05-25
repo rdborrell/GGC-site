@@ -1,25 +1,24 @@
-import React from 'react'
-import styles from '../style'
-import {churchPicture, ggcTag} from '../assets'
+// src/components/Hero.js
+import React from 'react';
+import MeetingTimes from './MeetingTimes';
+import styles from '../style';
 
 const Hero = () => {
-  return(
-    <section id='home' className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
-        <div className='flex flex-row justify-between items-center w-full'>
-          <h1 className='flex-1 font-poppins font-semibold text-[65px] md:text-[75px] text-white ss:leading-[100.8px] leading-[75px]'>
-            Grace Gospel <br className='sm:block hidden' />{" "}
-            <span className='text-gradient'>Church</span>{" "}
+  return (
+    <section id="hero" className={`bg-primary ${styles.paddingY}`}>
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <h1 className="text-5xl font-bold text-yellow-500 leading-tight mb-4">
+            Grace Gospel Church
           </h1>
+          <p className="text-white mb-8">
+            Grace Gospel Church exists to know Christ, love Christ, and share Christ with all those in the greater Nicholas County Area. We are a gospel-centered, Bible-believing, historically orthodox, Christian Church located in Summersville WV. Please join us this week at any of our gatherings to proclaim the name of Jesus!
+          </p>
+          <MeetingTimes />
         </div>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}></p>
       </div>
-      <div className={`flex-1 flex ${styles.flexEnd} md:my-0 my-10 relative`}>
-        {/* <img src={ggcTag} alt='ggcTag' className='w-[60%] h-[auto] relative z-[5] mr-12 mt-1 rounded-corners hiddenMobile sm:block'/> */}
-      </div>
-      <div className='absolute z-[0] w-[60%] h-[45%] top-0 pink__gradient'/>
     </section>
-  )
+  );
 }
 
-export default Hero
+export default Hero;
