@@ -1,57 +1,61 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import styles from './style';
+import { PageLayout, Section } from './components/layout';
+import { 
+  NavBar, 
+  Hero, 
+  Footer, 
+  About, 
+  Social, 
+  ChurchCenter,
+  ContactForm,
+  YoutubePage 
+} from './components';
+import { spacing, layout } from './theme';
 
-import { NavBar, Hero, Footer, About, Social, ChurchCenter } from "./components";
-import ContactForm from './components/ContactForm';
-import YoutubePage from './components/YoutubePage'; // Import the new page component
-
+/**
+ * App component - Main application with modern, warm design
+ */
 const App = () => {
   return (
     <Router>
-      <div className='bg-transparent'>
-        <div className='w-full overflow-hidden'>
-          <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-            <div className={`${styles.boxWidth}`}>
-              <NavBar />
-            </div>
-          </div>
-          <div className="pt-24"> {/* Add top padding here */}
+      <div className="bg-lightCream min-h-screen">
+        <div className="w-full overflow-hidden">
+          {/* Fixed Navigation */}
+          <NavBar />
+
+          {/* Main Content */}
+          <div className="pt-20">
             <Routes>
-              <Route path="/" element={
-                <>
-                  <Hero />
-                  <div className={`bg-primary ${styles.flexCenter}`} id="about">
-                    <div className={`${styles.boxWidth}`}>
+              {/* Home Route */}
+              <Route 
+                path="/" 
+                element={
+                  <>
+                    <Hero />
+                    
+                    <Section id="about" className="bg-white">
                       <About />
-                    </div>
-                  </div>
+                    </Section>
 
-                  <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`} id="social">
-                    <div className={`${styles.boxWidth}`}>
+                    <Section id="social" centered={false} className="bg-cream">
                       <Social />
-                    </div>
-                  </div>
+                    </Section>
 
-                  <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
-                    <div className={`${styles.boxWidth}`}>
+                    <Section centered={false} className="bg-white">
                       <ChurchCenter />
-                    </div>
-                  </div>
+                    </Section>
 
-                  <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
-                    <div className={`${styles.boxWidth}`}>
+                    <Section centered={false} className="bg-lightCream">
                       <ContactForm />
-                    </div>
-                  </div>
+                    </Section>
 
-                  <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
-                    <div className={`${styles.boxWidth}`}>
-                      <Footer />
-                    </div>
-                  </div>
-                </>
-              } />
+                    <Footer />
+                  </>
+                } 
+              />
+
+              {/* YouTube Route */}
               <Route path="/youtube" element={<YoutubePage />} />
             </Routes>
           </div>
@@ -59,6 +63,6 @@ const App = () => {
       </div>
     </Router>
   );
-}
+};
 
 export default App;

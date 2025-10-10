@@ -1,33 +1,37 @@
-// src/components/YoutubePage.js
 import React from 'react';
-import styles from '../style';
+import { PageLayout, Section } from './layout';
+import { typography, spacing } from '../theme';
 
+/**
+ * YoutubePage component - Displays YouTube sermon playlist
+ */
 const YoutubePage = () => {
   return (
-    <div className={`bg-transparent ${styles.pageContainer} pt-24`}>
-      <div className='w-full overflow-hidden'>
-        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-          <div className={`${styles.boxWidth}`}>
-            <h1 style={{ display: 'flex', justifyContent: 'center' }} className='flex-1 font-poppins font-semibold ss:text-[32px] text-[25px] text-white ss:leading-[100.8px] leading-[75px]'>
-              View Grace Gospel Church's latest sermons here!
-            </h1>
-            <h1>YouTube Playlist Page</h1>
-            <div className={`${styles.videoContainer}`}>
-              <iframe
-                width="100%"
-                height="600"
-                src="https://www.youtube.com/embed/videoseries?list=PLLdzfsmr-docGFvwPTFkIP1rmbk1EegJR"
-                title="YouTube playlist player"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              ></iframe>
-            </div>
+    <PageLayout>
+      <Section className={spacing.paddingY}>
+        <div className="text-center">
+          <h1 className={`${typography.heading1} mb-8`}>
+            Latest Sermons
+          </h1>
+          <p className={`${typography.paragraph} mb-12 max-w-3xl mx-auto`}>
+            Watch our latest sermons and messages from Grace Gospel Church. 
+            Subscribe to stay updated with new content!
+          </p>
+          
+          {/* Responsive iframe container */}
+          <div className="relative w-full max-w-5xl mx-auto" style={{ paddingBottom: '56.25%' }}>
+            <iframe
+              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
+              src="https://www.youtube.com/embed/videoseries?list=PLLdzfsmr-docGFvwPTFkIP1rmbk1EegJR"
+              title="Grace Gospel Church Sermons Playlist"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
         </div>
-      </div>
-    </div>
+      </Section>
+    </PageLayout>
   );
-}
+};
 
 export default YoutubePage;

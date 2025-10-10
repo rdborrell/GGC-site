@@ -1,3 +1,4 @@
+// Page components
 import NavBar from "./NavBar";
 import Footer from "./Footer";
 import Hero from "./Hero";
@@ -6,8 +7,14 @@ import Social from "./Social";
 import Facebook from "./Facebook";
 import Maps from "./Maps";
 import ChurchCenter from "./ChurchCenter";
-import MeetingTimes from "./MeetingTimes"
+import MeetingTimes from "./MeetingTimes";
+import ContactForm from "./ContactForm";
+import YoutubePage from "./YoutubePage";
 
+// Layout components
+export * from "./layout";
+
+// Export all components
 export {
   NavBar,
   Footer,
@@ -17,5 +24,7 @@ export {
   Facebook,
   Maps,
   ChurchCenter,
-  MeetingTimes
+  MeetingTimes,
+  ContactForm,
+  YoutubePage
 };
