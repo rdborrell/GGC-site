@@ -61,8 +61,8 @@ const Team = () => {
                     alt={member.names}
                     className="absolute inset-0 w-full h-full object-contain transition-transform duration-300"
                     style={{
-                      transform: 'none',            // no pre-zoom
-                      objectPosition: '100% 50%'     // centered
+                      transform: 'none',
+                      objectPosition: '100% 50%'
                     }}
                     onError={(e) => { e.target.style.display = 'none'; }}
                   />
