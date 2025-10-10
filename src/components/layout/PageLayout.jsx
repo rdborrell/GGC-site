@@ -5,8 +5,8 @@ import React from 'react';
  */
 const PageLayout = ({ children, className = '' }) => {
   return (
-    <div className={`bg-primary w-full overflow-hidden ${className}`}>
-      <div className="pt-24">
+    <div className={`w-full overflow-hidden ${className}`}>
+      <div className="pt-20">
         {children}
       </div>
     </div>

@@ -13,7 +13,7 @@ const Facebook = () => {
         src={`https://www.facebook.com/plugins/page.php?href=${encodedUrl}&tabs=timeline&width=366&height=331&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId`}
         width="100%"
         height="331"
-        style={{ border: 'none', overflow: 'hidden' }}
+        className="border-0 overflow-hidden"
         scrolling="no"
         frameBorder="0"
         allowFullScreen={true}

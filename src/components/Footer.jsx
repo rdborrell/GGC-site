@@ -13,13 +13,13 @@ const Footer = () => {
     },
     {
       icon: <FaMapMarkerAlt className="w-5 h-5" />,
-      text: '151 Sids Way, Summersville, WV 26651',
+      text: '564 Hookersville Rd, Summersville, WV 26651',
       href: 'https://maps.google.com/?q=151+Sids+Way+Summersville+WV+26651'
     },
     {
       icon: <FaPhone className="w-5 h-5" />,
-      text: '304-123-4567',
-      href: 'tel:304-123-4567'
+      text: '304-618-4322',
+      href: 'tel:304-618-4322'
     }
   ];
 
@@ -30,7 +30,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-gradient-to-b from-cream to-primary-50 border-t border-primary-100/50">
+    <footer className="bg-gradient-to-b from-eggshell to-gold-50 border-t border-gold-200/50">
       <div className="max-w-7xl mx-auto px-6 py-16">
         {/* Main Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">

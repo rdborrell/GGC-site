@@ -11,7 +11,7 @@ const ChurchCenter = () => {
       <div className="max-w-3xl mx-auto space-y-8">
         {/* Icon */}
         <div className="flex justify-center">
-          <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-accent-500 rounded-2xl flex items-center justify-center shadow-soft-lg">
+          <div className="w-20 h-20 bg-gradient-to-br from-primary-500 to-gold-500 rounded-2xl flex items-center justify-center shadow-soft-lg">
             <FaMobileAlt className="w-10 h-10 text-white" />
           </div>
         </div>
@@ -33,7 +33,7 @@ const ChurchCenter = () => {
             href="https://play.google.com/store/apps/details?id=com.ministrycentered.churchcenter&hl=en_US&gl=US"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center space-x-3 px-8 py-4 bg-white border-2 border-gray-200 rounded-xl hover:border-primary-300 hover:shadow-soft transition-all duration-300"
+            className="group inline-flex items-center space-x-3 px-8 py-4 bg-warmWhite border-2 border-gray-200 rounded-xl hover:border-primary-300 hover:shadow-soft transition-all duration-300"
           >
             <FaGooglePlay className="w-8 h-8 text-text-primary group-hover:text-primary-600 transition-colors" />
             <div className="text-left">
@@ -47,7 +47,7 @@ const ChurchCenter = () => {
             href="https://apps.apple.com/us/app/church-center-app/id1357742931"
             target="_blank"
             rel="noopener noreferrer"
-            className="group inline-flex items-center space-x-3 px-8 py-4 bg-white border-2 border-gray-200 rounded-xl hover:border-primary-300 hover:shadow-soft transition-all duration-300"
+            className="group inline-flex items-center space-x-3 px-8 py-4 bg-warmWhite border-2 border-gray-200 rounded-xl hover:border-primary-300 hover:shadow-soft transition-all duration-300"
           >
             <FaApple className="w-8 h-8 text-text-primary group-hover:text-primary-600 transition-colors" />
             <div className="text-left">

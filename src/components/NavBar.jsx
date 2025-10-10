@@ -24,20 +24,12 @@ const NavBar = () => {
       return <RouterLink to={nav.url}>{nav.title}</RouterLink>;
     }
     
-    return (
-      <ScrollLink
-        to={nav.id}
-        smooth={true}
-        duration={500}
-        offset={-70}
-      >
-        {nav.title}
-      </ScrollLink>
-    );
+    // For anchor links (About, Social), navigate to home with hash
+    return <RouterLink to={`/#${nav.id}`}>{nav.title}</RouterLink>;
   };
 
   return (
-    <nav className="w-full fixed top-0 left-0 z-50 bg-white/95 backdrop-blur-md shadow-soft border-b border-primary-100/30">
+    <nav className="w-full fixed top-0 left-0 z-50 bg-warmWhite/95 backdrop-blur-md shadow-soft border-b border-gold-200/30">
       <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         {/* Logo */}
         <RouterLink to="/" className="transition-transform hover:scale-105">
@@ -77,7 +69,7 @@ const NavBar = () => {
 
         {/* Mobile Menu */}
         {toggle && (
-          <div className="sm:hidden absolute top-full right-0 left-0 bg-white shadow-soft-lg border-t border-primary-100/30 animate-slideDown">
+          <div className="sm:hidden absolute top-full right-0 left-0 bg-warmWhite shadow-soft-lg border-t border-gold-200/30 animate-slideDown">
             <ul className="flex flex-col p-6 space-y-4">
               {navLinks.map((nav) => (
                 <li

@@ -21,7 +21,7 @@ const MeetingTimes = () => {
   ];
 
   return (
-    <div className="bg-white rounded-2xl shadow-soft-lg border border-primary-100/50 p-8">
+    <div className="bg-warmWhite rounded-2xl shadow-soft-lg border border-gold-200/50 p-8">
       <h2 className="text-3xl font-bold text-text-primary mb-6 text-center">
         Join Us This Week
       </h2>
@@ -30,7 +30,7 @@ const MeetingTimes = () => {
         {meetings.map((meeting, index) => (
           <div 
             key={index} 
-            className="group flex items-start space-x-4 p-5 bg-gradient-to-r from-cream to-primary-50 rounded-xl hover:shadow-soft transition-all duration-300 border border-transparent hover:border-primary-200"
+            className="group flex items-start space-x-4 p-5 bg-gradient-to-r from-eggshell to-gold-50 rounded-xl hover:shadow-soft transition-all duration-300 border border-transparent hover:border-gold-200"
           >
             <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-${meeting.color}-100 flex items-center justify-center text-${meeting.color}-600 group-hover:scale-110 transition-transform`}>
               {meeting.icon}

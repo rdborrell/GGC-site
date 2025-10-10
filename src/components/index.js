@@ -10,6 +10,7 @@ import ChurchCenter from "./ChurchCenter";
 import MeetingTimes from "./MeetingTimes";
 import ContactForm from "./ContactForm";
 import YoutubePage from "./YoutubePage";
+import Team from "./Team";
 
 // Layout components
 export * from "./layout";
@@ -26,5 +27,6 @@ export {
   ChurchCenter,
   MeetingTimes,
   ContactForm,
-  YoutubePage
+  YoutubePage,
+  Team
 };

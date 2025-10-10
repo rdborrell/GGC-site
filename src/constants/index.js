@@ -13,6 +13,12 @@ export const navLinks = [
     external: false,
   },
   {
+    id: 'team',
+    title: 'Team',
+    url: '/team',
+    external: false,
+  },
+  {
     id: 'about',
     title: 'About',
     url: '#about',

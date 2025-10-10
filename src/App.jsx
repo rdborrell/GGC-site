@@ -1,5 +1,5 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { PageLayout, Section } from './components/layout';
 import { 
   NavBar, 
@@ -9,9 +9,31 @@ import {
   Social, 
   ChurchCenter,
   ContactForm,
-  YoutubePage 
+  YoutubePage,
+  Team 
 } from './components';
 import { spacing, layout } from './theme';
+
+/**
+ * ScrollToAnchor - Handles scrolling to hash anchors on navigation
+ */
+const ScrollToAnchor = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      setTimeout(() => {
+        const id = location.hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, [location]);
+
+  return null;
+};
 
 /**
  * App component - Main application with modern, warm design
@@ -19,6 +41,7 @@ import { spacing, layout } from './theme';
 const App = () => {
   return (
     <Router>
+      <ScrollToAnchor />
       <div className="bg-lightCream min-h-screen">
         <div className="w-full overflow-hidden">
           {/* Fixed Navigation */}
@@ -34,19 +57,19 @@ const App = () => {
                   <>
                     <Hero />
                     
-                    <Section id="about" className="bg-white">
+                    <Section id="about" className="bg-warmWhite">
                       <About />
                     </Section>
 
-                    <Section id="social" centered={false} className="bg-cream">
+                    <Section id="social" centered={false} className="bg-eggshell">
                       <Social />
                     </Section>
 
-                    <Section centered={false} className="bg-white">
+                    <Section centered={false} className="bg-warmWhite">
                       <ChurchCenter />
                     </Section>
 
-                    <Section centered={false} className="bg-lightCream">
+                    <Section centered={false} className="bg-cream">
                       <ContactForm />
                     </Section>
 
@@ -57,6 +80,9 @@ const App = () => {
 
               {/* YouTube Route */}
               <Route path="/youtube" element={<YoutubePage />} />
+
+              {/* Team Route */}
+              <Route path="/team" element={<Team />} />
             </Routes>
           </div>
         </div>

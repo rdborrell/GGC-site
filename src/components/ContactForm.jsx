@@ -49,13 +49,13 @@ const ContactForm = () => {
         <h2 className="text-4xl font-bold text-text-primary mb-4">
           Let's Connect
         </h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto mb-6"></div>
+        <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-gold-500 rounded-full mx-auto mb-6"></div>
         <p className="text-lg text-text-secondary max-w-2xl mx-auto">
           We'd love to hear from you! Whether you have questions, need prayer, or just want to say hello.
         </p>
       </div>
 
-      <form ref={form} onSubmit={sendEmail} className="bg-white rounded-2xl shadow-soft-lg border border-primary-100/50 p-8 space-y-6">
+      <form ref={form} onSubmit={sendEmail} className="bg-warmWhite rounded-2xl shadow-soft-lg border border-gold-200/50 p-8 space-y-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {/* First Name */}
           <div>

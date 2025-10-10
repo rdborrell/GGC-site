@@ -13,7 +13,7 @@ const Social = () => {
         <h2 className="text-4xl font-bold text-text-primary mb-4">
           Connect With Us
         </h2>
-        <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full mx-auto mb-6"></div>
+        <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-gold-500 rounded-full mx-auto mb-6"></div>
         <p className="text-lg text-text-secondary max-w-2xl mx-auto">
           Stay updated with our latest sermons and events, or find directions to visit us in person.
         </p>
@@ -38,7 +38,7 @@ const Social = () => {
         {/* Center Image */}
         <div className="hidden lg:flex justify-center items-center">
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary-200 to-accent-200 rounded-2xl transform rotate-6"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-gold-200 to-primary-200 rounded-2xl transform rotate-6"></div>
             <img 
               src={sundayService} 
               alt="Sunday Service at Grace Gospel Church" 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { PageLayout, Section } from './layout';
-import { typography, spacing } from '../theme';
+import { Footer } from './index';
 
 /**
  * YoutubePage component - Displays YouTube sermon playlist
@@ -8,20 +8,20 @@ import { typography, spacing } from '../theme';
 const YoutubePage = () => {
   return (
     <PageLayout>
-      <Section className={spacing.paddingY}>
+      <Section className="bg-gradient-to-br from-gold-50 via-lightCream to-primary-50 py-16">
         <div className="text-center">
-          <h1 className={`${typography.heading1} mb-8`}>
+          <h1 className="text-4xl md:text-5xl font-bold text-text-primary mb-6">
             Latest Sermons
           </h1>
-          <p className={`${typography.paragraph} mb-12 max-w-3xl mx-auto`}>
+          <p className="text-lg text-text-secondary mb-12 max-w-3xl mx-auto">
             Watch our latest sermons and messages from Grace Gospel Church. 
             Subscribe to stay updated with new content!
           </p>
           
           {/* Responsive iframe container */}
-          <div className="relative w-full max-w-5xl mx-auto" style={{ paddingBottom: '56.25%' }}>
+          <div className="relative w-full max-w-5xl mx-auto aspect-video">
             <iframe
-              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-2xl"
+              className="absolute top-0 left-0 w-full h-full rounded-lg shadow-soft-lg"
               src="https://www.youtube.com/embed/videoseries?list=PLLdzfsmr-docGFvwPTFkIP1rmbk1EegJR"
               title="Grace Gospel Church Sermons Playlist"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -30,6 +30,7 @@ const YoutubePage = () => {
           </div>
         </div>
       </Section>
+      <Footer />
     </PageLayout>
   );
 };
