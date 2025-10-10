@@ -1,29 +1,55 @@
+/**
+ * @deprecated This file is maintained for backward compatibility.
+ * Please use the new theme system from '../theme' instead.
+ * 
+ * Migration guide:
+ * - Import from '../theme' instead of './style'
+ * - Use individual modules: spacing, typography, layout, components
+ * 
+ * Example:
+ * // Old way
+ * import styles from './style';
+ * <div className={styles.paddingX}>
+ * 
+ * // New way
+ * import { spacing } from './theme';
+ * <div className={spacing.paddingX}>
+ */
+
+import { spacing, layout as themeLayout, components, typography } from './theme';
+
+// Re-export theme values with legacy naming for backward compatibility
 const styles = {
-    boxWidth: "xl:max-w-[1280px] w-full",
+  // Spacing
+  boxWidth: spacing.boxWidth,
+  paddingX: spacing.paddingX,
+  paddingY: spacing.paddingY,
+  padding: spacing.padding,
+  marginX: spacing.marginX,
+  marginY: spacing.marginY,
   
-    heading2: "font-poppins font-semibold xs:text-[48px] text-[40px] text-white xs:leading-[76.8px] leading-[66.8px] w-full",
-    paragraph: "font-poppins font-normal text-dimWhite text-[18px] leading-[30.8px]",
+  // Layout
+  flexCenter: themeLayout.flexCenter,
+  flexStart: themeLayout.flexStart,
+  flexEnd: themeLayout.flexEnd,
   
-    flexCenter: "flex justify-center items-center",
-    flexStart: "flex justify-center items-start",
-    flexEnd: "flex justify-end items-end",
+  // Typography
+  heading2: typography.heading2,
+  paragraph: typography.paragraph,
   
-    paddingX: "sm:px-16 px-6",
-    paddingY: "sm:py-16 py-6",
-    padding: "sm:px-16 px-6 sm:py-12 py-4",
-  
-    marginX: "sm:mx-16 mx-6",
-    marginY: "sm:my-16 my-6",
-  };
-  
-  export const layout = {
-    section: `flex md:flex-row flex-col ${styles.paddingY}`,
-    sectionReverse: `flex md:flex-row flex-col-reverse ${styles.paddingY}`,
-  
-    sectionImgReverse: `flex-1 flex ${styles.flexCenter} md:mr-10 mr-0 md:mt-0 mt-10 relative`,
-    sectionImg: `flex-1 flex ${styles.flexCenter} md:ml-10 ml-0 md:mt-0 mt-10 relative`,
-  
-    sectionInfo: `flex-1 ${styles.flexStart} flex-col`,
-  };
-  
-  export default styles;
+  // Components
+  videoContainer: components.videoContainer,
+  pageContainer: components.pageContainer,
+  navbar: components.navbar,
+  rightMargin: 'mr-4'
+};
+
+export const layout = {
+  section: themeLayout.section,
+  sectionReverse: themeLayout.sectionReverse,
+  sectionImgReverse: themeLayout.sectionImgReverse,
+  sectionImg: themeLayout.sectionImg,
+  sectionInfo: themeLayout.sectionInfo,
+};
+
+export default styles;

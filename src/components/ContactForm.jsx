@@ -1,119 +1,153 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
-import { useState } from 'react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
-import { Switch } from '@headlessui/react'
+import Swal from 'sweetalert2';
+import { FaPaperPlane } from 'react-icons/fa';
 
-function classNames(...classes) {
-    return classes.filter(Boolean).join(' ')
-  }
-
-export const ContactForm = () => {
+/**
+ * ContactForm component - Modern, elegant contact form
+ */
+const ContactForm = () => {
   const form = useRef();
-  const [agreed, setAgreed] = useState(false)
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const sendEmail = (e) => {
+  const sendEmail = async (e) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    emailjs.sendForm('service_qdu6r0l', 'template_e3aezld', form.current, 'd1QV9dQQmSEotQoyk')
-      .then((result) => {
-          console.log(result.text);
-      }, (error) => {
-          console.log(error.text);
+    try {
+      await emailjs.sendForm(
+        'service_qdu6r0l', 
+        'template_e3aezld', 
+        form.current, 
+        'd1QV9dQQmSEotQoyk'
+      );
+      
+      Swal.fire({
+        title: 'Message Sent!',
+        text: 'Thank you for reaching out. We\'ll get back to you soon.',
+        icon: 'success',
+        confirmButtonColor: '#F5B800',
+        confirmButtonText: 'Great!',
       });
-      e.target.reset()
+      
+      e.target.reset();
+    } catch (error) {
+      Swal.fire({
+        title: 'Oops!',
+        text: 'Something went wrong. Please try again or email us directly.',
+        icon: 'error',
+        confirmButtonColor: '#F5B800',
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <div id='connect' className="isolate bg-white py-20 px-5 sm:py-22 lg:px-5">
-      <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
-        <svg
-          className="relative left-1/2 -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-40rem)] sm:h-[42.375rem]"
-          viewBox="0 0 1155 678"
-        >
-          <path
-            fill="url(#45de2b6b-92d5-4d68-a6a0-9b9b2abad533)"
-            fillOpacity=".3"
-            d="M317.219 518.975L203.852 678 0 438.341l317.219 80.634 204.172-286.402c1.307 132.337 45.083 346.658 209.733 145.248C936.936 126.058 882.053-94.234 1031.02 41.331c119.18 108.451 130.68 295.337 121.53 375.223L855 299l21.173 362.054-558.954-142.079z"
-          />
-        </svg>
-      </div>
-      <div className="mx-auto max-w-2xl text-center">
-        <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Connect with us!</h2>
-        <p className="mt-2 text-lg leading-8 text-gray-600">
-          We'd love to have your feedback and questions.
+    <div id="connect" className="max-w-4xl mx-auto px-6 py-20">
+      <div className="text-center mb-12">
+        <h2 className="text-4xl font-bold text-text-primary mb-4">
+          Let's Connect
+        </h2>
+        <div className="w-20 h-1 bg-gradient-to-r from-primary-500 to-gold-500 rounded-full mx-auto mb-6"></div>
+        <p className="text-lg text-text-secondary max-w-2xl mx-auto">
+          We'd love to hear from you! Whether you have questions, need prayer, or just want to say hello.
         </p>
       </div>
-      <form ref={form} onSubmit={sendEmail}>
-        <div className="grid grid-cols-1 gap-y-6 gap-x-8 sm:grid-cols-2">
+
+      <form ref={form} onSubmit={sendEmail} className="bg-warmWhite rounded-2xl shadow-soft-lg border border-gold-200/50 p-8 space-y-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {/* First Name */}
           <div>
-            <label htmlFor="first-name" className="block text-sm font-semibold leading-6 text-gray-900">
-              First name
+            <label htmlFor="first-name" className="block text-sm font-semibold text-text-primary mb-2">
+              First Name
             </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="first-name"
-                id="first-name"
-                autoComplete="given-name"
-                className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              autoComplete="given-name"
+              required
+              className="block w-full rounded-lg border-2 border-gray-200 py-3 px-4 text-text-primary focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+              placeholder="John"
+            />
           </div>
+
+          {/* Last Name */}
           <div>
-            <label htmlFor="last-name" className="block text-sm font-semibold leading-6 text-gray-900">
-              Last name
+            <label htmlFor="last-name" className="block text-sm font-semibold text-text-primary mb-2">
+              Last Name
             </label>
-            <div className="mt-2.5">
-              <input
-                type="text"
-                name="last-name"
-                id="last-name"
-                autoComplete="family-name"
-                className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="email" className="block text-sm font-semibold leading-6 text-gray-900">
-              Email
-            </label>
-            <div className="mt-2.5">
-              <input
-                type="email"
-                name="email"
-                id="email"
-                autoComplete="email"
-                className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-              />
-            </div>
-          </div>
-          <div className="sm:col-span-2">
-            <label htmlFor="message" className="block text-sm font-semibold leading-6 text-gray-900">
-              Message
-            </label>
-            <div className="mt-2.5">
-              <textarea
-                name="message"
-                id="message"
-                rows={4}
-                className="block w-full rounded-md border-0 py-2 px-3.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                defaultValue={''}
-              />
-            </div>
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              autoComplete="family-name"
+              required
+              className="block w-full rounded-lg border-2 border-gray-200 py-3 px-4 text-text-primary focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+              placeholder="Doe"
+            />
           </div>
         </div>
-        <div className="mt-10">
+
+        {/* Email */}
+        <div>
+          <label htmlFor="email" className="block text-sm font-semibold text-text-primary mb-2">
+            Email Address
+          </label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            autoComplete="email"
+            required
+            className="block w-full rounded-lg border-2 border-gray-200 py-3 px-4 text-text-primary focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all"
+            placeholder="john.doe@example.com"
+          />
+        </div>
+
+        {/* Message */}
+        <div>
+          <label htmlFor="message" className="block text-sm font-semibold text-text-primary mb-2">
+            Your Message
+          </label>
+          <textarea
+            name="message"
+            id="message"
+            rows={5}
+            required
+            className="block w-full rounded-lg border-2 border-gray-200 py-3 px-4 text-text-primary focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-all resize-none"
+            placeholder="How can we help you?"
+          />
+        </div>
+
+        {/* Submit Button */}
+        <div className="pt-4">
           <button
             type="submit"
-            className="block w-full rounded-md bg-yellow-500 px-3.5 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-amber-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:bg-amber-400"
+            disabled={isSubmitting}
+            className={`w-full flex items-center justify-center space-x-2 rounded-lg bg-gradient-to-r from-primary-500 to-primary-600 px-6 py-4 text-lg font-semibold text-white shadow-lg transition-all ${
+              isSubmitting 
+                ? 'opacity-70 cursor-not-allowed' 
+                : 'hover:from-primary-600 hover:to-primary-700 hover:shadow-xl transform hover:-translate-y-0.5'
+            }`}
           >
-            Send!
+            {isSubmitting ? (
+              <>
+                <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                <span>Sending...</span>
+              </>
+            ) : (
+              <>
+                <FaPaperPlane className="w-5 h-5" />
+                <span>Send Message</span>
+              </>
+            )}
           </button>
         </div>
       </form>
     </div>
-  )
+  );
 };
 
-export default ContactForm
+export default ContactForm;

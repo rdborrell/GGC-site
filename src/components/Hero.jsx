@@ -1,25 +1,65 @@
-import React from 'react'
-import styles from '../style'
-import {churchPicture, ggcTag} from '../assets'
+import React from 'react';
+import MeetingTimes from './MeetingTimes';
+import { FaChurch, FaBible, FaHeart } from 'react-icons/fa';
 
+/**
+ * Hero component - Modern, welcoming hero section with gradient
+ */
 const Hero = () => {
-  return(
-    <section id='home' className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-      <div className={`flex-1 ${styles.flexStart} flex-col xl:px-0 sm:px-16 px-6`}>
-        <div className='flex flex-row justify-between items-center w-full'>
-          <h1 className='flex-1 font-poppins font-semibold text-[65px] md:text-[75px] text-white ss:leading-[100.8px] leading-[75px]'>
-            Grace Gospel <br className='sm:block hidden' />{" "}
-            <span className='text-gradient'>Church</span>{" "}
-          </h1>
-        </div>
-        <p className={`${styles.paragraph} max-w-[470px] mt-5`}></p>
-      </div>
-      <div className={`flex-1 flex ${styles.flexEnd} md:my-0 my-10 relative`}>
-        <img src={ggcTag} alt='ggcTag' className='w-[60%] h-[auto] relative z-[5] mr-12 mt-1 rounded-corners hiddenMobile sm:block'/>
-      </div>
-      <div className='absolute z-[0] w-[60%] h-[45%] top-0 pink__gradient'/>
-    </section>
-  )
-}
+  const values = [
+    { icon: <FaChurch className="w-6 h-6" />, text: 'Know Christ' },
+    { icon: <FaHeart className="w-6 h-6" />, text: 'Love Christ' },
+    { icon: <FaBible className="w-6 h-6" />, text: 'Share Christ' },
+  ];
 
-export default Hero
+  return (
+    <section 
+      id="hero" 
+      className="relative bg-gradient-to-br from-gold-50 via-lightCream to-primary-50 py-20 sm:py-32"
+    >
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-20 left-10 w-72 h-72 bg-gold-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob"></div>
+        <div className="absolute top-40 right-10 w-72 h-72 bg-primary-100 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-2000"></div>
+        <div className="absolute -bottom-8 left-1/2 w-72 h-72 bg-gold-50 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-blob animation-delay-4000"></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-6">
+        <div className="text-center mb-12">
+          {/* Main heading */}
+          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-primary-700 via-primary-600 to-gold-700 bg-clip-text text-transparent">
+              Grace Gospel Church
+            </span>
+          </h1>
+          
+          {/* Values badges */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {values.map((value, index) => (
+              <div
+                key={index}
+                className="flex items-center space-x-2 px-4 py-2 bg-warmWhite/90 backdrop-blur-sm rounded-full shadow-soft border border-gold-200/50"
+              >
+                <span className="text-primary-600">{value.icon}</span>
+                <span className="text-text-primary font-medium">{value.text}</span>
+              </div>
+            ))}
+          </div>
+
+          {/* Description */}
+          <p className="text-lg sm:text-xl text-text-secondary max-w-3xl mx-auto leading-relaxed mb-12">
+            A gospel-centered, Bible-believing, historically orthodox Christian Church located in Summersville, WV. 
+            Join us this week to proclaim the name of Jesus!
+          </p>
+        </div>
+
+        {/* Meeting Times Card */}
+        <div className="max-w-2xl mx-auto">
+          <MeetingTimes />
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;

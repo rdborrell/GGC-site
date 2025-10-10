@@ -1,21 +1,37 @@
+// src/constants.js
 export const navLinks = [
   {
-    id: "home",
-    title: "Home",
+    id: 'home',
+    title: 'Home',
+    url: '/',
+    external: false,
   },
   {
-    id: "about",
-    title: "About",
+    id: 'sermons',
+    title: 'Sermons',
+    url: '/youtube',
+    external: false,
   },
   {
-    id: "connect",
-    title: "Connect",
+    id: 'team',
+    title: 'Team',
+    url: '/team',
+    external: false,
   },
   {
-    id: "findUs",
-    title: "Find Us",
+    id: 'about',
+    title: 'About',
+    url: '#about',
+    external: false,
+  },
+  {
+    id: 'social',
+    title: 'Social',
+    url: '#social',
+    external: false,
   },
 ];
+
 
 export const footerLinks = [
   {
