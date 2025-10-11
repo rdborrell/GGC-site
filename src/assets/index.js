@@ -10,6 +10,7 @@ import jakenikki from "./jakenikki.png"
 import peytonmykah from "./peytonmykah.jpg"
 import jesse from "./jesse.png"
 import ggcmembers from "./ggcmembers.png"
+import churchAudience from "./churchAudience.jpg"
 
 export {
   logo,
@@ -23,5 +24,6 @@ export {
   jakenikki,
   peytonmykah,
   jesse,
-  ggcmembers
+  ggcmembers,
+  churchAudience
 };
